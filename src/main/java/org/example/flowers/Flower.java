@@ -1,6 +1,6 @@
 package org.example.flowers;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,7 +17,6 @@ public class Flower extends Item {
             sequenceName = "flower_sequence",
             allocationSize = 1
     )
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @GeneratedValue(
             strategy = GenerationType.SEQUENCE,
             generator = "flower_sequence"
